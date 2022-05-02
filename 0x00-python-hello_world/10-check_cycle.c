@@ -11,7 +11,7 @@ int check_cycle(listint_t *list)
 
 	if (!list)
 		return (0);
-	while (tmp2->next)
+	while (tmp && tmp2 && tmp2->next)
 	{
 		tmp = tmp->next;
 		tmp2 = tmp2->next->next;
