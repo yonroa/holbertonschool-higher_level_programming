@@ -6,12 +6,12 @@
  */
 int check_cycle(listint_t *list)
 {
-	int tmp = list->n;
+	struct listint_s *tmp = list;
 	list = list->next;
 
 	while (list->next != NULL)
 	{
-		if (list->n == tmp)
+		if (list->next == tmp)
 			return (1);
 		list = list->next;
 	}
