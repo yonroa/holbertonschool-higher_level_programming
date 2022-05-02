@@ -6,14 +6,15 @@
  */
 int check_cycle(listint_t *list)
 {
-	struct listint_s *tmp = list;
-	list = list->next;
+	listint_t *tmp = list;
 
-	while (list->next != NULL)
+	if (!list)
+		return (0);
+	while (tmp->next != NULL)
 	{
-		if (list->next == tmp)
+		tmp = tmp->next;
+		if (list == tmp)
 			return (1);
-		list = list->next;
 	}
 	return (0);
 }
