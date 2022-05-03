@@ -4,4 +4,4 @@ for i in range(0, 9):
         if i == 8:
             print(f"{i}{h}")
         else:
-            print(f"{i}{h}", end = ", ")
+            print(f"{i}{h}", end=", ")
