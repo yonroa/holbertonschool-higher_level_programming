@@ -7,7 +7,7 @@ int is_palindrome(listint_t **head)
     listint_t *copy2 = *head;
     int n_nodes = 0, i = 0;
 
-    if (!head || !*head)
+    if (*head == NULL || (*head)->next == NULL)
         return (1);
     while (copy)
     {
