@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if a_dictionary == None:
+    try:
+        maximus = max(a_dictionary.items())
+        return (maximus[0])
+    except:
         return (None)
-    maximus = max(a_dictionary.items())
-    return (maximus[0])
