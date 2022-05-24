@@ -51,7 +51,7 @@ class Square:
                     if j >= self.__position[0] and i >= self.__position[1]:
                         print("#", end="")
                     elif i >= self.__position[1]:
-                        print("_", end="")
+                        print(" ", end="")
                 print("")
         else:
             print("")
