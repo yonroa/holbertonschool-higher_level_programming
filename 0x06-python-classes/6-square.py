@@ -53,13 +53,10 @@ class Square:
     def my_print(self):
         """Prints the square with the char '#'"""
         if self.__size != 0:
-            for i in range(self.__size + self.__position[1]):
-                for j in range(self.__size + self.__position[0]):
-                    if j >= self.__position[0] and i >= self.__position[1]:
-                        print("#", end="")
-                    elif i >= self.__position[1]:
-                        print(" ", end="")
+            for i in range(self.__position[1]):
                 print("")
+            for j in range(self.__size):
+                print(f"{' ' * self.__position[0]}{'#' * self.__size}")
         else:
             print("")
             return
