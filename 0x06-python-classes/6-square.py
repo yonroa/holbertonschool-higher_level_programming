@@ -7,17 +7,17 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Instantiation safe of an square"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def position(self):
-        """int: Return the position of the square"""
-        return (self.__position)
+        """int: Return the size of the square"""
+        return self.__position
 
     @position.setter
     def position(self, value):
-        """Sets the attribute position"""
+        """Sets the attribute attribute"""
         self.__position = value
         if type(value) is not tuple:
             self.__position = None
@@ -35,22 +35,20 @@ class Square:
     @property
     def size(self):
         """int: Return the size of the square"""
-        return (self.__size)
+        return self.__size
 
     @size.setter
     def size(self, value):
         """Sets the attribute size"""
-        if type(value) == int:
-            if value >= 0:
-                self.__size = value
-            else:
-                raise ValueError("size must be >= 0")
-        else:
+        self.__size = value
+        if type(value) is not int:
             raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
 
     def area(self):
         """int: Return the area of the square"""
-        return (self.__size ** 2)
+        return self.__size ** 2
 
     def my_print(self):
         """Prints the square with the char '#'"""
