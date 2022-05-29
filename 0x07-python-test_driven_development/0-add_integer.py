@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" 
-The "add_integer" module
+"""
+The "0-add_integer" module
 
 This module supplies one function, add_integer(). For example.,
 
@@ -10,7 +10,9 @@ This module supplies one function, add_integer(). For example.,
 
 
 def add_integer(a, b=98):
-    """Return a + b."""
+    """Return the sum of a and b.
+    Return some error if something is wrong
+    """
 
     if type(a) not in (int, float):
         raise TypeError("a must be an integer")

@@ -1,0 +1,71 @@
+The ``2-matrix_divided`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+
+This text file proves the right work of the module
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+    >>> matrix_1 = [[8, 7, 6], [50, 60, 70], [4, 2, 1]]
+    >>> matrix_2 = [[8, 7, 6], [50, 70], [4, 2, 1]]
+    >>> matrix_3 = [[8, 7, 6], [50, 60, 70], ["hello", 'bro', "ok"]]
+    >>> matrix_4 = [[8.7, 7.5, 6.9], [50, 60, 70], [4.3, 2, 1]]
+    >>> matrix_5 = ([8, 5, 9], [4, 7, 1])
+    >>> matrix_6 = (7, 6, 9)
+    >>> matrix_7 = []
+    >>> matrix_8 = [[]]
+
+    >>> matrix_divided(matrix_1, 2)
+    [[4.0, 3.5, 3.0], [25.0, 30.0, 35.0], [2.0, 1.0, 0.5]]
+
+    >>> matrix_divided(matrix_2, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+
+    >>> matrix_divided(matrix_3, 5)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(matrix_4, 2)
+    [[4.35, 3.75, 3.45], [25.0, 30.0, 35.0], [2.15, 1.0, 0.5]]
+
+    >>> matrix_divided(matrix_5, 7)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(matrix_6, 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(8, 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(8.4, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(matrix_1, -3.3)
+    [[-2.42, -2.12, -1.82], [-15.15, -18.18, -21.21], [-1.21, -0.61, -0.3]]
+
+    >>> matrix_divided(matrix_1, 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+    >>> matrix_divided(matrix_7, 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(matrix_8, 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
