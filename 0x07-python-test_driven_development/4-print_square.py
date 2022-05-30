@@ -2,7 +2,7 @@
 """
 The "4-print_square" module
 
-This module supplies one function, print_square(). For example.,
+This module supplies one function, print_square(). For example,
 
 >>> print_square(3)
 ###

@@ -2,7 +2,7 @@
 """
 The "2-matrix_divided" module
 
-This module supplies one function, matrix_divided(). For example.,
+This module supplies one function, matrix_divided(). For example,
 
 >>> matrix = [[2, 4, 6], [8, 10, 12]]
 >>> matrix_divided(matrix, 2)

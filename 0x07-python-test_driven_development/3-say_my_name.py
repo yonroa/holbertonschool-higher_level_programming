@@ -2,7 +2,7 @@
 """
 The "3-say_my_name.py" module
 
-This module supplies one function, say_my_name(). For example.,
+This module supplies one function, say_my_name(). For example,
 
 >>> say_my_name(Yon, Roa)
 My name is Yon Roa

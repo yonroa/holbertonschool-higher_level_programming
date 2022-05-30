@@ -2,7 +2,7 @@
 """
 The "0-add_integer" module
 
-This module supplies one function, add_integer(). For example.,
+This module supplies one function, add_integer(). For example,
 
 >>> add_integer(2, 3)
 5
