@@ -11,7 +11,7 @@ This module supplies one function, add_integer(). For example.,
 
 def add_integer(a, b=98):
     """Return the sum of a and b.
-    Return some error if something is wrong
+    Print some error if something is wrong
     """
 
     if type(a) not in (int, float):

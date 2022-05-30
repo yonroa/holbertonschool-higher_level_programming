@@ -11,7 +11,9 @@ This module supplies one function, matrix_divided(). For example.,
 
 
 def matrix_divided(matrix, div):
-    """Return a new matrix with the divided numbers"""
+    """Return a new matrix with the divided numbers
+    Print some error if something is wrong
+    """
     new_matrix = []
     if type(matrix) is not list:
         raise TypeError(
