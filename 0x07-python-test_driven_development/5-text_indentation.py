@@ -12,7 +12,8 @@ I am fine
 
 
 def text_indentation(text):
-    """Prints a text with 2 new lines after each of these characters: ., ? and :
+    """Prints a text with 2 new lines after each of these characters:
+    ('.', '?' and ':')
     Print some error if something is wrong
     """
     if type(text) is not str:
