@@ -46,3 +46,24 @@ This text file proves the right work of the module
 
     >>> my_list.print_sorted()
     []
+
+    >>> my_list = MyList()
+
+    >>> type(my_list) == MyList
+    True
+
+    >>> my_list = MyList()
+
+    >>> isinstance(ml, list)
+    True
+
+    >>> type(MyList.__dict__['print_sorted'])
+    <class 'function'>
+
+    >>> my_list.print_sorted([4, 2, 5])
+    Traceback (most recent call last):
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+    >>> my_list.print_sorted([4, 2, 5], 1)
+    Traceback (most recent call last):
+    TypeError: print_sorted() takes 1 positional argument but 3 were given
