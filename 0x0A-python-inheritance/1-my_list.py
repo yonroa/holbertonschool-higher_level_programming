@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Module to define the child class MyList"""
+"""Module 1-my_list
+define the child class MyList
+"""
 
 
 class MyList(list):
