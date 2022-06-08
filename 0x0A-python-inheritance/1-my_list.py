@@ -9,9 +9,7 @@ class MyList(list):
 
     def print_sorted(self):
         """print the list in ascendig sort"""
-        new_l = self[:]
-        new_l.sort
-        print(new_l)
+        print(sorted(self))
 
 
 if __name__ == "__main__":

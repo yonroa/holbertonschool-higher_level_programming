@@ -39,10 +39,10 @@ This text file proves the right work of the module
     >>> my_list
     ['w', 'o', 'r', 'l', 'd']
 
-    >>> my_list.print_sorted
+    >>> my_list.print_sorted()
     ['d', 'l', 'o', 'r', 'w']
 
     >>> my_list = MyList()
 
-    >>> my_list.print_sorted
+    >>> my_list.print_sorted()
     []
