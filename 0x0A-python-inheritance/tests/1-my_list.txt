@@ -54,7 +54,7 @@ This text file proves the right work of the module
 
     >>> my_list = MyList()
 
-    >>> isinstance(ml, list)
+    >>> isinstance(my_list, list)
     True
 
     >>> type(MyList.__dict__['print_sorted'])
