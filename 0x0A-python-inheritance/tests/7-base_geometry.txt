@@ -1,0 +1,68 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+This text file proves the right work of the module
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+    >>> BG = BaseGeometry()
+    
+    >>> BG.integer_validator("int", 12)
+
+    >>> BG.integer_validator("width", 24)
+
+    >>> BG.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+    >>> BG.integer_validator("name", "Luck")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+    >>> BG.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+    
+    >>> BG.integer_validator("distance", -2)
+    Traceback (most recent call last):
+    ValueError: distance must be greater than 0
+
+    >>> BG.integer_validator("float", 3.3)
+    Traceback (most recent call last):
+    TypeError: float must be an integer
+
+    >>> BG.integer_validator("test")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> BG.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> BG.integer_validator("number", float('number'))
+    Traceback (most recent call last):
+    TypeError: number must be an integer
+
+    >>> BG.integer_validator("Big", 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+    >>> BG.integer_validator("number", (2,))
+    Traceback (most recent call last):
+    TypeError: number must be an integer
+
+    >>> BG.integer_validator("list", [3])
+    Traceback (most recent call last):
+    TypeError: list must be an integer
+
+    >>> BG.integer_validator("boolean", True)
+    Traceback (most recent call last):
+    TypeError: boolean must be an integer
+
+    >>> BG.integer_validator("numbers", {3, 4})
+    Traceback (most recent call last):
+    TypeError: numbers must be an integer
+
+    >>> BG.integer_validator("variable", None)
+    Traceback (most recent call last):
+    TypeError: variable must be an integer
