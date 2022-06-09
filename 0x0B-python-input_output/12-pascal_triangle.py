@@ -12,9 +12,7 @@ def pascal_triangle(n):
     matrix.append([1])
     if n >= 2:
         matrix.append([1, 1])
-    if n >= 3:
-        matrix.append([1, 2, 1])
-    for x in range(2, n - 1):
+    for x in range(1, n - 1):
         new_row = []
         new_row.append(1)
         for idx in range(0, len(matrix[x]) - 1):
