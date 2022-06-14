@@ -21,7 +21,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns the JSON string representation of list_dictionaries"""
-        if list_dictionaries is None or list_dictionaries == []:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -41,7 +41,7 @@ class Base:
     def from_json_string(json_string):
         """returns the list of the JSON string representation json_string"""
         string = []
-        if json_string is None or json_string == '':
+        if type(json_string) is not str or len(json_string) == 0:
             return string
         string = json.loads(json_string)
         return string
