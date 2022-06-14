@@ -64,7 +64,8 @@ class Base:
         new_dict = []
         if os.path.exists(filename):
             with open(filename, 'r') as file:
-                new_dict = cls.from_json_string(file.read())
+                j = file.read()
+                new_dict = cls.from_json_string(j)
                 for i in new_dict:
                     new_l.append(cls.create(**i))
-        return new_dict
+        return new_l
