@@ -32,11 +32,12 @@ class TestRectangle(unittest.TestCase):
             o4 = Rectangle(None)
             o5 = Rectangle(float('inf'))
             o6 = Rectangle(9.5, 9.3)
-            o7 = Rectangle(-8, 9)
-            o8 = Rectangle()
-            o9 = Rectangle("1", 2)
-            o10 = Rectangle(1, "2")
-            o11 = Rectangle(1, 2, 3, "4")
+            o7 = Rectangle()
+            o8 = Rectangle("1", 2)
+            o9 = Rectangle(1, "2")
+            o10 = Rectangle(1, 2, 3, "4")
+        with self.assertRaises(ValueError):
+            o11 = Rectangle(-8, 9)
             o12 = Rectangle(1, -2)
 
         self.assertEqual(o1.id, 1)
