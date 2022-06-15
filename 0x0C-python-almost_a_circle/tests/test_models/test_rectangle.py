@@ -32,7 +32,6 @@ class TestRectangle(unittest.TestCase):
             o4 = Rectangle(None)
             o5 = Rectangle(float('inf'))
             o6 = Rectangle(9.5, 9.3)
-            o7 = Rectangle()
             o8 = Rectangle("1", 2)
             o9 = Rectangle(1, "2")
             o10 = Rectangle(1, 2, 3, "4")
