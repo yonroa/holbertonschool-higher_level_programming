@@ -165,6 +165,12 @@ class TestRectangle(unittest.TestCase):
         self.assertDictEqual(o3.to_dictionary(), d3)
         self.assertDictEqual(o4.to_dictionary(), d4)
 
+    def test_save_file(self):
+        """Testing save to file
+        """
+        Rectangle.save_to_file(None)
+        Rectangle.save_to_file([])
+        Rectangle.save_to_file([Rectangle(1, 2)])
 
 if __name__ == '__main__':
     unittest.main()
