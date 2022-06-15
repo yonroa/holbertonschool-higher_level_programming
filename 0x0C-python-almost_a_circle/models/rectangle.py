@@ -88,33 +88,25 @@ class Rectangle(Base):
         return str(f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - " +
                    f"{self.__width}/{self.__height}")
 
+    def __update(self, id=None, width=None, height=None, x=None, y=None):
+        ''' Internal method that updates instance attributes '''
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+
     def update(self, *args, **kwargs):
-        """assigns an argument to each attribute"""
-        if args is not None and len(args) != 0:
-            if type(args[0]) is not int and args[0] is not None:
-                raise ValueError
-            if len(args) > 0:
-                self.id = args[0]
-            if len(args) > 1:
-                self.__width = args[1]
-            if len(args) > 2:
-                self.__height = args[2]
-            if len(args) > 3:
-                self.__x = args[3]
-            if len(args) > 4:
-                self.__y = args[4]
-        else:
-            for key, value in kwargs.items():
-                if key == 'id':
-                    self.id = value
-                if key == 'width':
-                    self.__width = value
-                if key == 'height':
-                    self.__height = value
-                if key == 'x':
-                    self.__x = value
-                if key == 'y':
-                    self.__y = value
+        ''' Update the Rectangle attributes '''
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
 
     def to_dictionary(self):
         """returns the dictionary representation of a Rectangle"""
