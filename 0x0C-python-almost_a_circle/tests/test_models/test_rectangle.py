@@ -27,17 +27,17 @@ class TestRectangle(unittest.TestCase):
 
         o1 = Rectangle(3, 2)
         o2 = Rectangle(8, 7, 0, 0, 12)
-        with self.assertRaises(TypeError):
-            o3 = Rectangle("string")
-            o4 = Rectangle(None)
-            o5 = Rectangle(float('inf'))
-            o6 = Rectangle(9.5, 9.3)
-            o8 = Rectangle("1", 2)
-            o9 = Rectangle(1, "2")
-            o10 = Rectangle(1, 2, 3, "4")
+        self.assertRaises(TypeError, Rectangle, ("string"))
+        self.assertRaises(TypeError, Rectangle, (None))
+        self.assertRaises(TypeError, Rectangle, (float('inf')))
+        self.assertRaises(TypeError, Rectangle, (9.5, 9.3))
+        self.assertRaises(TypeError, Rectangle, ("1", 2))
+        self.assertRaises(TypeError, Rectangle, (1, "2"))
+        self.assertRaises(TypeError, Rectangle, (1, 2, 3, "4"))
+
         with self.assertRaises(ValueError):
-            o11 = Rectangle(-8, 9)
-            o12 = Rectangle(1, -2)
+            o3 = Rectangle(-8, 9)
+            o4 = Rectangle(1, -2)
 
         self.assertEqual(o1.id, 1)
         self.assertEqual(o1._Base__nb_objects, 1)
