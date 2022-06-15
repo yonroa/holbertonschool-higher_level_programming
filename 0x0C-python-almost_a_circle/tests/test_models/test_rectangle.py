@@ -172,5 +172,6 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file([])
         Rectangle.save_to_file([Rectangle(1, 2)])
 
+
 if __name__ == '__main__':
     unittest.main()
