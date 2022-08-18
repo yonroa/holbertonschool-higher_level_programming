@@ -17,9 +17,10 @@ axios.get(process.argv[2])
   });
 
 function search18 (data) {
-  const Wedge = 'https://swapi-api.hbtn.io/api/people/18/';
   for (let i = 0; i < data.length; i++) {
-    if (data[i] === Wedge) {
+    const character = data[i];
+    const characterId = character.split('/')[5];
+    if (characterId === '18') {
       return 1;
     }
   }
