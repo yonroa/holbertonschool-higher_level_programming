@@ -6,8 +6,8 @@ if __name__ == "__main__":
     import requests
     import sys
     payload = {'q': ""}
-    if len(sys.argv) == 3:
-        payload = {'q': sys.argv[2]}
+    if len(sys.argv) == 2:
+        payload = {'q': sys.argv[1]}
     r = requests.post('http://0.0.0.0:5000/search_user', data=payload)
     try:
         r_dict = r.json()
